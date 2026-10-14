@@ -1,0 +1,158 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+wheels/
+MANIFEST
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.pyre/
+.ruff_cache/
+
+# =========================
+# Virtual environments
+# =========================
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.*
+!.env.example
+!.env.template
+
+# =========================
+# Jupyter Notebook
+# =========================
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# =========================
+# Data files
+# =========================
+data/
+*.db
+*.sqlite
+*.sqlite3
+*.duckdb
+*.parquet
+*.csv
+*.tsv
+*.jsonl
+*.avro
+*.orc
+
+# =========================
+# Logs and temporary files
+# =========================
+logs/
+*.log
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# =========================
+# Sensitive configuration files
+# =========================
+secrets/
+secret/
+credentials/
+config/secrets/
+config/credentials/
+
+secrets.*
+credentials.*
+*secret*
+*credential*
+*password*
+*token*
+
+# Private keys and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+
+# Sensitive configuration formats
+config/*.local.*
+config/*secret*.yaml
+config/*secret*.yml
+config/*secret*.json
+config/*credential*.yaml
+config/*credential*.yml
+config/*credential*.json
+
+# Cloud provider credentials
+.aws/
+.gcloud/
+.azure/
+terraform.tfstate
+terraform.tfstate.*
+*.tfvars
+*.tfvars.json
+
+# =========================
+# IDE and editor files
+# =========================
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+
+# =========================
+# Airflow
+# =========================
+airflow.cfg
+airflow.db
+airflow-webserver.pid
+airflow/logs/
+
+# =========================
+# dbt
+# =========================
+target/
+dbt_packages/
+logs/dbt.log
+manifest.json
+run_results.json
+catalog.json
+.partial_parse.msgpack
+
+# =========================
+# Spark
+# =========================
+.sparkStaging/
+spark-warehouse/
+
+# =========================
+# Docker and local overrides
+# =========================
+docker-compose.override.yml
