@@ -1,28 +1,28 @@
 # =========================
-# Python
+# Python bytecode and caches
 # =========================
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
-
-# Python packaging
-build/
-dist/
-*.egg-info/
-.eggs/
-pip-wheel-metadata/
-wheels/
-MANIFEST
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.tox/
+.nox/
 .coverage
 .coverage.*
 htmlcov/
-.tox/
-.nox/
-.mypy_cache/
-.pyre/
-.ruff_cache/
+
+# =========================
+# Build and packaging artifacts
+# =========================
+build/
+dist/
+.eggs/
+*.egg-info/
+pip-wheel-metadata/
+MANIFEST
 
 # =========================
 # Virtual environments
@@ -31,11 +31,9 @@ venv/
 .venv/
 env/
 ENV/
-env.bak/
-venv.bak/
 
 # =========================
-# Environment variables
+# Environment files
 # =========================
 .env
 .env.*
@@ -43,55 +41,40 @@ venv.bak/
 !.env.template
 
 # =========================
-# Jupyter Notebook
+# Data, notebooks, and generated outputs
 # =========================
+data/
+!data/.gitkeep
 .ipynb_checkpoints/
 *.nbconvert.ipynb
 
 # =========================
-# Data files
+# Logs and local runtime files
 # =========================
-data/
+logs/
+*.log
+*.pid
+*.tmp
+*.swp
+*.swo
+
+# =========================
+# Local databases and analytical artifacts
+# =========================
 *.db
 *.sqlite
 *.sqlite3
 *.duckdb
 *.parquet
-*.csv
-*.tsv
-*.jsonl
-*.avro
-*.orc
 
 # =========================
-# Logs and temporary files
+# Secrets, credentials, keys, and certificates
 # =========================
-logs/
-*.log
-tmp/
-temp/
-*.tmp
-*.bak
-*.swp
-*.swo
-
-# =========================
-# Sensitive configuration files
-# =========================
-secrets/
-secret/
+.aws/
+.gcloud/
+.azure/
 credentials/
-config/secrets/
-config/credentials/
-
-secrets.*
-credentials.*
-*secret*
-*credential*
-*password*
-*token*
-
-# Private keys and certificates
+secrets/
 *.pem
 *.key
 *.p12
@@ -100,26 +83,21 @@ credentials.*
 *.cer
 *.der
 
-# Sensitive configuration formats
-config/*.local.*
-config/*secret*.yaml
-config/*secret*.yml
-config/*secret*.json
-config/*credential*.yaml
-config/*credential*.yml
-config/*credential*.json
-
-# Cloud provider credentials
-.aws/
-.gcloud/
-.azure/
-terraform.tfstate
-terraform.tfstate.*
+# =========================
+# Terraform and infrastructure state
+# =========================
+.terraform/
+*.tfstate
+*.tfstate.*
 *.tfvars
 *.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
 
 # =========================
-# IDE and editor files
+# IDE and OS files
 # =========================
 .vscode/
 .idea/
@@ -128,31 +106,17 @@ terraform.tfstate.*
 Thumbs.db
 
 # =========================
-# Airflow
+# Tool-specific generated files
 # =========================
 airflow.cfg
 airflow.db
 airflow-webserver.pid
 airflow/logs/
-
-# =========================
-# dbt
-# =========================
 target/
 dbt_packages/
-logs/dbt.log
 manifest.json
 run_results.json
 catalog.json
 .partial_parse.msgpack
-
-# =========================
-# Spark
-# =========================
 .sparkStaging/
 spark-warehouse/
-
-# =========================
-# Docker and local overrides
-# =========================
-docker-compose.override.yml
